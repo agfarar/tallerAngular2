@@ -1,0 +1,33 @@
+<div class="container mt-5">
+    <h1 class="text-center mb-4">TV Series</h1>
+    <div class="row">
+        <div class="col">
+            <table class="table table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Canal</th>
+                        <th scope="col">Temporadas</th>
+                        <th scope="col">Descripción</th>
+                        <th scope="col">Página Web</th>
+                        <th scope="col">Poster</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let serie of series">
+                        <th scope="row">{{ serie.id }}</th>
+                        <td>{{ serie.name }}</td>
+                        <td>{{ serie.channel }}</td>
+                        <td>{{ serie.seasons }}</td>
+                        <td>{{ serie.description }}</td>
+                        <td><a [href]="serie.webpage" target="_blank" class="btn btn-sm btn-info">Ir a la página web</a></td>
+                        <td><img [src]="serie.poster" alt="Poster de {{ serie.name }}" class="img-fluid" style="max-width: 100px;"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
